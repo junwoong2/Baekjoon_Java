@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+ 
+public class Main {
+ 
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int T = Integer.parseInt(br.readLine());
+		
+		int[] arr = {300, 60, 10};
+		
+		int count=0;
+		for(int i=0;i<3;i++) {
+			if(T>=arr[i]) {
+				count = T/arr[i];
+				T = T%arr[i];
+				arr[i] = count;
+			}
+			else {
+				arr[i] = 0;
+			}
+		}
+		
+		if(T == 0) {
+			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]);
+		}
+		else {
+			System.out.println(-1);
+		}
+		
+	}
+}

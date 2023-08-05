@@ -18,7 +18,7 @@ public class Main {
 				T = T%arr[i];
 				arr[i] = count;
 			}
-			else {
+			else {//
 				arr[i] = 0;
 			}
 		}
